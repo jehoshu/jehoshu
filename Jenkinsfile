@@ -3,10 +3,14 @@ pipeline{
         docker {image 'node:16.13.1-alpine'}
     }
     stages{
-        stage('Test') {
+        stage('node') {
             steps {
-                sh 'node --version'
-                
+                sh 'node --version'    
+            }
+        }
+        stage('python') {
+            steps {
+                sh 'python3 --version'   
             }
         }
     }
